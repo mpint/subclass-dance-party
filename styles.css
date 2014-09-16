@@ -25,3 +25,29 @@ body, a:link, a:visited, a:active{
   border-radius:10px;
   position:absolute;
 }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform: rotate(360deg); } }
+
+@-webkit-keyframes myOrbit {
+    from { -webkit-transform: rotate(0deg) translateX(150px) rotate(0deg); }
+    to   { -webkit-transform: rotate(360deg) translateX(150px) rotate(-360deg); }
+}
+
+@keyframes myOrbit {
+    from { transform: rotate(0deg) translateX(150px) rotate(0deg); }
+    to   { transform: rotate(360deg) translateX(150px) rotate(-360deg); }
+}
+.rotate {
+  -webkit-animation: spin 4s linear infinite;
+  animation: spin 4s linear infinite;
+  height:40px;
+  width:40px;
+  border-top-left-radius:25%;
+  border-right-bottom-radius:50%;
+}
+
+.orbit {
+      -webkit-animation: myOrbit 2s linear infinite; /* Chrome, Safari 5 */
+            animation: myOrbit 2s linear infinite; /* Chrome, Firefox 16+,
+                                                      IE 10+, Safari 5 */
+}

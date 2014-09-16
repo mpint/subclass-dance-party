@@ -1,6 +1,6 @@
 describe("circleDancer", function() {
 
-  var colorDancer;
+  var spinDancer;
   var timeBetweenSteps = 100;
   var clock;
 
@@ -14,9 +14,9 @@ describe("circleDancer", function() {
   });
 
   it("should have a step function that makes its node blink", function() {
-    sinon.spy(circleDancer.$node, 'animate');
+    sinon.spy(circleDancer.$node, 'addClass');
     circleDancer.step();
-    expect(circleDancer.$node.animate.called).to.be.true;
+    expect(circleDancer.$node.addClass.called).to.be.true;
   });
 
   describe("dance", function(){
