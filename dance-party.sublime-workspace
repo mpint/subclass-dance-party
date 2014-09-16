@@ -1,0 +1,223 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+		]
+	},
+	"buffers":
+	[
+		{
+			"contents": "Package Control Messages\n========================\n\nAdvancedNewFile:\n---------------\n\n  - Add new command `advanced_new_file_copy` to copy commands. See the wiki for more details about the command.\n  - General bug fixes.\n  \n\n\nBetter CoffeeScript:\n-------------------\n\n  # Better CoffeeScript changelog\n  \n  ```\n  IF YOU SEE THIS MESSAGE\n  Because you have updated the plugin,\n  you might need to restart Sublime Text\n  if the syntax highlighter stopped working.\n  ```\n  \n  ## Version 2.1\n  \n  ### May 2014 Log\n  * Have been doing little improvements with the help of community\n  * Pull requests are always welcome and appreciated.\n  * Looking for active maintainer, will give pointers for development!!!\n  \n  \n  \n  ## Version 2.0\n  \n  Version 2.0 is out!\n  \n  ### Log:\n  * New written Watch Mode.\n  * Line number tracking in Watch Mode.\n  * Toggle 2 columns when enabling Watch Mode.\n  * It is possible to compile with sourcemaps.\n  * Compile litcofee files.\n  * Auto-indent after `else\\n`.\n  * and other bugs fixes.\n  \n  \n  \n\n\nSublimeLinter:\n-------------\n\n  SublimeLinter 3.4.3\n  --------------------\n  \n  The \"rc_search_limit\" setting has changed. To disable the use of .sublimelinterrc\n  completely (which may be necessary when using slow remote filesystems),\n  set \"rc_search_limit\" to 0 (zero).\n  \n  To enable an unlimited search, set \"rc_search_limit\" to null.\n  \n\n  SublimeLinter 3.4.0\n  --------------------\n  Setting values may now contain tokens:\n  \n  - ${project}: the project's base directory, if available.\n  - ${directory}: the dirname of the current view's file.\n  - ${env:<x>}: the environment variable 'x'.\n  - ${home}: the user's $HOME directory.\n  \n  ${project} and ${directory} expansion are dependent on having a window.\n  \n  For example, here are project settings that use a project-relative path:\n  \n  {\n      \"SublimeLinter\": {\n          \"linters\": {\n              \"pylint\": {\n                  \"paths\":\n                  [\n                      \"${project}/source/\"\n                  ]\n              }\n          }\n      }\n  }\n  \n",
+			"settings":
+			{
+				"buffer_size": 2054,
+				"line_ending": "Unix",
+				"name": "Package Control Messages",
+				"scratch": true
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 375.0,
+		"selected_items":
+		[
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"coffee",
+				"Coffee: Display JavaScript"
+			],
+			[
+				"cod",
+				"Coffee: Display JavaScript"
+			],
+			[
+				"coffe",
+				"Coffee: Display JavaScript"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 579.0
+	},
+	"console":
+	{
+		"height": 169.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/student/Desktop/jax.sh",
+		"/etc/fstab",
+		"/Users/student/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Users/student/Library/Application Support/Sublime Text 3/Packages/User/SublimeLinter.sublime-settings",
+		"/Users/student/Desktop/yemp.js"
+	],
+	"find":
+	{
+		"height": 29.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"HR10"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2054,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2054,
+								2054
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"word_wrap": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 29.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 138.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"project": "dance-party.sublime-project",
+	"replace":
+	{
+		"height": 54.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

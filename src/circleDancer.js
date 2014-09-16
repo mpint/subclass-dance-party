@@ -10,5 +10,7 @@ CircleDancer.prototype.step = function() {
   Dancer.prototype.step.call(this);
   // this.$node.animate({left: Math.random() * 500, top: Math.random() * 800});
 
-  this.$node.addClass('orbit');
+  this.$node.addClass('orbit carlton');
+  this.$node.removeClass('dancer');
+
 };
