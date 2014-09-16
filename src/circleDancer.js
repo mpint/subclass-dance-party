@@ -8,5 +8,5 @@ CircleDancer.prototype.constructor = CircleDancer;
 CircleDancer.prototype.step = function() {
 
   Dancer.prototype.step.call(this);
-  this.$node.animate({left: Math.random()*500, top: Math.random()*800});
+  this.$node.animate({left: Math.random() * 500, top: Math.random() * 800});
 };
