@@ -6,11 +6,8 @@ CircleDancer.prototype = Object.create(Dancer.prototype);
 CircleDancer.prototype.constructor = CircleDancer;
 
 CircleDancer.prototype.step = function() {
-
   Dancer.prototype.step.call(this);
-  // this.$node.animate({left: Math.random() * 500, top: Math.random() * 800});
 
-  this.$node.addClass('orbit carlton');
-  this.$node.removeClass('dancer');
-
+  this.$node.addClass('orbit carlton')
+            .removeClass('dancer');
 };

@@ -13,7 +13,6 @@ var Dancer = function(top, left, timeBetweenSteps){
 Dancer.prototype.step = function(){
   // the basic dancer doesn't do anything interesting at all on each step,
   // it just schedules the next step
-
   setTimeout(this.step.bind(this), this.timeBetweenSteps);
 };
 
@@ -29,46 +28,41 @@ Dancer.prototype.setPosition = function(top, left){
 };
 
 Dancer.prototype.lineUp = function(offset) {
-
   this.setPosition(offset * 50 + 100 + 'px','50px');
 };
 
 Dancer.prototype.findNearestNeighbor = function () {
 
-  var mousedDancer, nearest;
+  var minDistance = undefined,
+      index = 0;
 
-  var computeDistance = function (a,b) {
-
-    var height, width, distance;
-    height = Math.abs(parseInt(a.top) - parseInt(b.top));
-    width = Math.abs(parseInt(a.left) - parseInt(b.left));
-    distance = Math.sqrt( Math.pow(height,2) + Math.pow(width,2) );
-    return parseInt(distance);
-  };
-
-  mousedDancer = {
+  var mousedDancer = {
     top: this.$node.css('top'),
     left: this.$node.css('left')
   }
 
-  nearest = {
-    distance: undefined,
-    index: 0
-  }
+  var computeDistance = function(a,b) {
+    var height = Math.abs(parseInt(a.top) - parseInt(b.top));
+    var width = Math.abs(parseInt(a.left) - parseInt(b.left));
+    var distance = Math.sqrt( Math.pow(height, 2) + Math.pow(width, 2) );
+
+    return parseInt(distance);
+  };
 
   for ( var i = 0, len = window.dancers.length; i < len; i++ ) {
-
     var current = window.dancers[i];
     var currentDancer = { top: current.$node.css('top'), left: current.$node.css('left') };
+
+    // skip if current points to the source dancer object
     if (current === this) { continue; }
 
     var distance = computeDistance(mousedDancer, currentDancer);
 
-    if (nearest.distance === undefined || nearest.distance > distance) {
-      nearest.distance = distance;
-      nearest.index = i;
+    if (minDistance === undefined || minDistance > distance) {
+      minDistance = distance;
+      index = i;
     }
   }
 
-  return nearest.index;
+  return index;
 };

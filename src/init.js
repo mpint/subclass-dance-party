@@ -2,9 +2,7 @@ $(document).ready(function(){
   window.dancers = [];
 
   $('.lineUpButton').on('click', function () {
-
     for ( var i = 0, len = window.dancers.length; i < len; i++ ) {
-
       window.dancers[i].lineUp(i);
     }
   });
@@ -38,13 +36,22 @@ $(document).ready(function(){
     $('body').append(dancer.$node);
     window.dancers.push(dancer);
 
-    dancer.$node.on('mouseover', function () {
+    // attach an event listner to find the nearest neighbor
+    dancer.$node.on('mouseover', function() {
       var index = Dancer.prototype.findNearestNeighbor.call(dancer);
-      var theDancer = window.dancers[index];
-      var temp = { top: dancer.$node.css('top'), left: dancer.$node.css('left') };
-      theDancer.$node.animate(temp);
-      dancer.$node.animate({ top: theDancer.$node.css('top'), left: theDancer.$node.css('left') });
+      var nearestDancer = window.dancers[index];
+      var temp = {
+        top: dancer.$node.css('top'),
+        left: dancer.$node.css('left')
+      };
+
+      nearestDancer.$node.animate(temp);
+      dancer.$node.animate({
+        top: nearestDancer.$node.css('top'),
+        left: nearestDancer.$node.css('left')
+      });
     });
+
   });
 });
 
