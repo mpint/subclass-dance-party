@@ -35,19 +35,16 @@ $(document).ready(function(){
       Math.random() * 1000
     );
 
-    dancer.$node.on('mouseover', function () {
+    $('body').append(dancer.$node);
+    window.dancers.push(dancer);
 
-      // alert($(this).css('top'));
+    dancer.$node.on('mouseover', function () {
       var index = Dancer.prototype.findNearestNeighbor.call(dancer);
       var theDancer = window.dancers[index];
       var temp = { top: dancer.$node.css('top'), left: dancer.$node.css('left') };
       theDancer.$node.animate(temp);
       dancer.$node.animate({ top: theDancer.$node.css('top'), left: theDancer.$node.css('left') });
     });
-
-    $('body').append(dancer.$node);
-    window.dancers.push(dancer);
-
   });
 });
 

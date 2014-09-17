@@ -36,8 +36,8 @@ body, a:link, a:visited, a:active{
 }
 
 @keyframes myOrbit {
-    from { transform: rotate(0deg) translateX(150px) rotate(0deg); }
-    to   { transform: rotate(360deg) translateX(150px) rotate(-360deg); }
+    from { transform: rotate(0deg) translateX(50px) rotate(0deg); }
+    to   { transform: rotate(360deg) translateX(50px) rotate(-360deg); }
 }
 .rotate {
   -webkit-animation: spin 4s linear infinite;
